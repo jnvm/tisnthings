@@ -1,0 +1,15 @@
+{
+  "name": "tisnthings",
+  "version": "1.6.19",
+  "description": "Smallish set of things I often use.  Favors brevity.",
+  "main": "tisnthings.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "type-checking",
+    "utility"
+  ],
+  "author": "Joη <j@nvm.io> (http://nvm.io)",
+  "license": "MIT"
+}
