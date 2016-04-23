@@ -7,9 +7,17 @@ Example: type checking with `tis(a,b)` (as in "type is"):
 tis(x,"")//is x a string?
 tis(x,[])//is x an array?
 tis(x,aFxn)//is x a function?
+tis(x,aPromise)//is x a promise?
 tis(x,/ /)//is x regex?
-tis(x,new CustomThing)//is x a customThing?
+tis(x,new CustomThing)//is x a CustomThing?
 ```
+`tis` works by constructor comparisons, with some quick checks first, so:
+```javascript
+tis(NaN,1)//false
+tis(NaN,NaN)//true!
+```
+`type(x)` will give you a string of x a bit more distinctly than `typeof`. (`[]` is `'array'`!)
+
 Or a quick ways to `g`uess random numbers:
 ```javascript
 g()//plain Math.random()
@@ -50,8 +58,9 @@ x.in("a b c")//true if x=='a' || x=='b' || x=='c' (case insensitive)
 Some constants & simple functions for easy reading:
 ```javascript
 var aDay=24*3600*1000
-  ,noop=function(){}
+  ,aPromise=new Promise(function(){})
   ,aFxn=function(){}
+  ,noop=function(){}
   ,asc =function(a,b){return a<b?1:-1}
   ,desc=function(a,b){return a>b?1:-1}
   ,lexicalAsc=function(a,b){return a>b?1:a==b?0:-1}
@@ -61,7 +70,7 @@ Sometimes it's worth insisting you have an array:
 ```javascript
 //x might not be an array
 insistArray(x)//but it definitely is now
-	.map(x=>x*x)
+    .map(x=>x*x)
 ```
 
 Give a function some inputs, but don't execute just yet:

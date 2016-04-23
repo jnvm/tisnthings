@@ -1,6 +1,6 @@
 {
   "name": "tisnthings",
-  "version": "1.6.20",
+  "version": "1.6.22",
   "description": "Smallish set of things I often use.  Favors brevity.",
   "main": "tisnthings.js",
   "repository": {
