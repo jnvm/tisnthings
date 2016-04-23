@@ -78,6 +78,7 @@
 		,aDay           :24*3600*1000
 		,noop         	:function(){}
 		,aFxn           :function(){}		
+		,aPromise       :new Promise(function(){})
 		,asc            :function(a,b){return a<b?1:-1}
 		,desc           :function(a,b){return a>b?1:-1}
 		,lexicalAsc   	:function(a,b){return a>b?1:a==b?0:-1}
@@ -108,6 +109,9 @@
 				.reduce(function(a,v){
 					return a+String.fromCharCode(v)
 				},'')
+		}
+		,type           :function(x){
+			return ({}).toString.call(x).match(/\s([^\]]+)/)[1].toLowerCase()
 		}
 	}
 	//go away Maths
