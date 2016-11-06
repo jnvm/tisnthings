@@ -18,7 +18,7 @@ tis(NaN,NaN)//true!
 ```
 `type(x)` will give you a string of x a bit more distinctly than `typeof`. (`[]` is `'array'`!)
 
-Or a quick ways to `g`uess random numbers:
+Or a quick way to `g`uess random numbers:
 ```javascript
 g()//plain Math.random()
 g(1)// 50 / 50 chance truthy
